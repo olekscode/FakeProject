@@ -29,6 +29,31 @@ TContainerTests >> testAt [
 ]
 
 { #category : #tests }
+TContainerTests >> testCollect [
+
+	| result |
+	container insertAll: #(a b c d e).
+	
+	result := container collect: [ :each | each asUppercase ].
+	
+	self assert: result asArray equals: #(A B C D E).
+	
+]
+
+{ #category : #tests }
+TContainerTests >> testDo [
+
+	| string |
+	container insertAll: #(a b c d e).
+	
+	string := ''.
+	container do: [ :each | string := string, each ].
+	
+	self assert: string equals: 'abcde'.
+	
+]
+
+{ #category : #tests }
 TContainerTests >> testIsEmpty [
 	self assert: container isEmpty.
 	container insert: 1.

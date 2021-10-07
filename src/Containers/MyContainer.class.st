@@ -10,6 +10,25 @@ MyContainer >> at: aNumber [
 	self subclassResponsibility
 ]
 
+{ #category : #enumerating }
+MyContainer >> collect: aBlock [
+
+	| newContainer |
+	newContainer := self class new.
+
+	self do: [ :each |
+		newContainer insert: (aBlock value: each) ].
+	
+	^ newContainer
+]
+
+{ #category : #enumerating }
+MyContainer >> do: aBlock [
+
+	1 to: self size do: [ :i |
+		aBlock value: (self at: i) ]
+]
+
 { #category : #adding }
 MyContainer >> insert: anObject [
 

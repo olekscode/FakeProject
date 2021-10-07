@@ -9,19 +9,6 @@ Class {
 }
 
 { #category : #adding }
-CTLinkedList >> add: anObject [
-
-	| link |
-	
-	link := CTLink new
-		value: anObject;
-		yourself.
-		
-	tail nextLink: link.
-	tail := link.
-]
-
-{ #category : #adding }
 CTLinkedList >> asArray [
 
 	| contents current |
@@ -55,6 +42,19 @@ CTLinkedList >> initialize [
 	super initialize.
 	head := CTLink new.
 	tail := head.
+]
+
+{ #category : #adding }
+CTLinkedList >> insert: anObject [
+
+	| link |
+	
+	link := CTLink new
+		value: anObject;
+		yourself.
+		
+	tail nextLink: link.
+	tail := link.
 ]
 
 { #category : #adding }

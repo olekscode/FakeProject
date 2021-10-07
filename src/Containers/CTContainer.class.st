@@ -5,21 +5,21 @@ Class {
 }
 
 { #category : #adding }
-CTContainer >> add: anObject [
-
-	self subclassResponsibility
-]
-
-{ #category : #adding }
-CTContainer >> addAll: aCollection [
-
-	aCollection do: [ :each | self add: each ]
-]
-
-{ #category : #adding }
 CTContainer >> at: aNumber [
 
 	self subclassResponsibility
+]
+
+{ #category : #adding }
+CTContainer >> insert: anObject [
+
+	self subclassResponsibility
+]
+
+{ #category : #adding }
+CTContainer >> insertAll: aCollection [
+
+	aCollection do: [ :each | self insert: each ]
 ]
 
 { #category : #adding }

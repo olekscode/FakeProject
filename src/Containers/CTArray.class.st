@@ -7,12 +7,6 @@ Class {
 	#category : #Containers
 }
 
-{ #category : #adding }
-CTArray >> add: anObject [
-
-	contents add: anObject
-]
-
 { #category : #converting }
 CTArray >> asArray [ 
 
@@ -29,6 +23,12 @@ CTArray >> at: aNumber [
 CTArray >> initialize [
 	super initialize.
 	contents := OrderedCollection new.
+]
+
+{ #category : #adding }
+CTArray >> insert: anObject [
+
+	contents add: anObject
 ]
 
 { #category : #adding }

@@ -17,7 +17,7 @@ MyContainer >> collect: aBlock [
 	newContainer := self class new.
 
 	self do: [ :each |
-		newContainer insert: (aBlock value: each) ].
+		newContainer insertElement: (aBlock value: each) ].
 	
 	^ newContainer
 ]
@@ -30,15 +30,15 @@ MyContainer >> do: aBlock [
 ]
 
 { #category : #adding }
-MyContainer >> insert: anObject [
+MyContainer >> insertAllElements: aCollection [
 
-	self subclassResponsibility
+	aCollection do: [ :each | self insertElement: each ]
 ]
 
 { #category : #adding }
-MyContainer >> insertAll: aCollection [
+MyContainer >> insertElement: anObject [
 
-	aCollection do: [ :each | self insert: each ]
+	self subclassResponsibility
 ]
 
 { #category : #adding }

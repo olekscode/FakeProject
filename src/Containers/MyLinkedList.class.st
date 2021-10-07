@@ -45,7 +45,7 @@ MyLinkedList >> initialize [
 ]
 
 { #category : #adding }
-MyLinkedList >> insert: anObject [
+MyLinkedList >> insertElement: anObject [
 
 	| link |
 	

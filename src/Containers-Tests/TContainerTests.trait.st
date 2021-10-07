@@ -8,21 +8,21 @@ Trait {
 
 { #category : #tests }
 TContainerTests >> testAdd [
-	container insert: 1.
-	container insert: #hello.
+	container insertElement: 1.
+	container insertElement: #hello.
 	
 	self assert: container asArray equals: #(1 hello).
 ]
 
 { #category : #tests }
 TContainerTests >> testAddAll [
-	container insertAll: #(1 hello).
+	container insertAllElements: #(1 hello).
 	self assert: container asArray equals: #(1 hello).
 ]
 
 { #category : #tests }
 TContainerTests >> testAt [
-	container insertAll: #(1 hello).
+	container insertAllElements: #(1 hello).
 	
 	self assert: (container at: 1) equals: 1.
 	self assert: (container at: 2) equals: #hello.
@@ -32,7 +32,7 @@ TContainerTests >> testAt [
 TContainerTests >> testCollect [
 
 	| result |
-	container insertAll: #(a b c d e).
+	container insertAllElements: #(a b c d e).
 	
 	result := container collect: [ :each | each asUppercase ].
 	
@@ -44,7 +44,7 @@ TContainerTests >> testCollect [
 TContainerTests >> testDo [
 
 	| string |
-	container insertAll: #(a b c d e).
+	container insertAllElements: #(a b c d e).
 	
 	string := ''.
 	container do: [ :each | string := string, each ].
@@ -56,13 +56,13 @@ TContainerTests >> testDo [
 { #category : #tests }
 TContainerTests >> testIsEmpty [
 	self assert: container isEmpty.
-	container insert: 1.
+	container insertElement: 1.
 	self deny: container isEmpty.
 ]
 
 { #category : #tests }
 TContainerTests >> testSize [
-	container insertAll: #(1 hello world).
+	container insertAllElements: #(1 hello world).
 	self assert: container size equals: 3.
 ]
 

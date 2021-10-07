@@ -26,7 +26,7 @@ MyArray >> initialize [
 ]
 
 { #category : #adding }
-MyArray >> insert: anObject [
+MyArray >> insertElement: anObject [
 
 	contents add: anObject
 ]

@@ -37,12 +37,6 @@ MyArray >> isEmpty [
 	^ self size = 0
 ]
 
-{ #category : #adding }
-MyArray >> remove: anObject [
-
-	contents remove: anObject
-]
-
 { #category : #accessing }
 MyArray >> size [ 
 	^ contents size

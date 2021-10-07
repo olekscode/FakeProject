@@ -63,20 +63,6 @@ MyLinkedList >> isEmpty [
 	^ head = tail
 ]
 
-{ #category : #adding }
-MyLinkedList >> remove: anObject [
-
-	| current |
-	current := head.
-	
-	[ current nextLink isNil ] whileFalse: [
-		current nextLink value = anObject ifTrue: [ 
-			current nextLink: current nextLink nextLink.
-			^ anObject ].
-	
-		current := current nextLink ].
-]
-
 { #category : #accessing }
 MyLinkedList >> size [
 	

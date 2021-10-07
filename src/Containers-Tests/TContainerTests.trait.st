@@ -61,13 +61,6 @@ TContainerTests >> testIsEmpty [
 ]
 
 { #category : #tests }
-TContainerTests >> testRemove [
-	container insertAll: #(1 hello).
-	container remove: #hello.
-	self assert: container asArray equals: #(1).
-]
-
-{ #category : #tests }
 TContainerTests >> testSize [
 	container insertAll: #(1 hello world).
 	self assert: container size equals: 3.

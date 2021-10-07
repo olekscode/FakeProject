@@ -48,12 +48,6 @@ MyContainer >> isEmpty [
 ]
 
 { #category : #adding }
-MyContainer >> remove: anObject [
-
-	self subclassResponsibility
-]
-
-{ #category : #adding }
 MyContainer >> size [
 
 	self subclassResponsibility

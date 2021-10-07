@@ -57,6 +57,12 @@ MyLinkedList >> insert: anObject [
 	tail := link.
 ]
 
+{ #category : #testing }
+MyLinkedList >> isEmpty [
+
+	^ head = tail
+]
+
 { #category : #adding }
 MyLinkedList >> remove: anObject [
 

@@ -31,6 +31,12 @@ MyArray >> insert: anObject [
 	contents add: anObject
 ]
 
+{ #category : #testing }
+MyArray >> isEmpty [
+
+	^ self size = 0
+]
+
 { #category : #adding }
 MyArray >> remove: anObject [
 

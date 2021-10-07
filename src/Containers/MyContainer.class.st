@@ -44,7 +44,7 @@ MyContainer >> insertAll: aCollection [
 { #category : #adding }
 MyContainer >> isEmpty [
 
-	^ self size = 0
+	self subclassResponsibility
 ]
 
 { #category : #adding }

@@ -1,5 +1,5 @@
 Class {
-	#name : #CTLink,
+	#name : #MyLink,
 	#superclass : #Object,
 	#instVars : [
 		'value',
@@ -9,25 +9,25 @@ Class {
 }
 
 { #category : #accessing }
-CTLink >> nextLink [
+MyLink >> nextLink [
 
 	^ nextLink
 ]
 
 { #category : #accessing }
-CTLink >> nextLink: anObject [
+MyLink >> nextLink: anObject [
 
 	nextLink := anObject
 ]
 
 { #category : #accessing }
-CTLink >> value [
+MyLink >> value [
 	
 	^ value
 ]
 
 { #category : #accessing }
-CTLink >> value: anObject [
+MyLink >> value: anObject [
 
 	value := anObject
 ]

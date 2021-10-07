@@ -1,5 +1,5 @@
 Class {
-	#name : #CTLinkedListTest,
+	#name : #MyLinkedListTest,
 	#superclass : #TestCase,
 	#traits : 'TContainerTests',
 	#classTraits : 'TContainerTests classTrait',
@@ -7,8 +7,8 @@ Class {
 }
 
 { #category : #initialization }
-CTLinkedListTest >> setUp [
+MyLinkedListTest >> setUp [
 
 	super setUp.
-	container := CTLinkedList new.
+	container := MyLinkedList new.
 ]

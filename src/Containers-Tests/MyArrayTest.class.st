@@ -1,5 +1,5 @@
 Class {
-	#name : #CTArrayTest,
+	#name : #MyArrayTest,
 	#superclass : #TestCase,
 	#traits : 'TContainerTests',
 	#classTraits : 'TContainerTests classTrait',
@@ -7,8 +7,8 @@ Class {
 }
 
 { #category : #initialization }
-CTArrayTest >> setUp [
+MyArrayTest >> setUp [
 
 	super setUp.
-	container := CTArray new.
+	container := MyArray new.
 ]

@@ -1,41 +1,41 @@
 Class {
-	#name : #CTContainer,
+	#name : #MyContainer,
 	#superclass : #Object,
 	#category : #Containers
 }
 
 { #category : #adding }
-CTContainer >> at: aNumber [
+MyContainer >> at: aNumber [
 
 	self subclassResponsibility
 ]
 
 { #category : #adding }
-CTContainer >> insert: anObject [
+MyContainer >> insert: anObject [
 
 	self subclassResponsibility
 ]
 
 { #category : #adding }
-CTContainer >> insertAll: aCollection [
+MyContainer >> insertAll: aCollection [
 
 	aCollection do: [ :each | self insert: each ]
 ]
 
 { #category : #adding }
-CTContainer >> isEmpty [
+MyContainer >> isEmpty [
 
 	^ self size = 0
 ]
 
 { #category : #adding }
-CTContainer >> remove: anObject [
+MyContainer >> remove: anObject [
 
 	self subclassResponsibility
 ]
 
 { #category : #adding }
-CTContainer >> size [
+MyContainer >> size [
 
 	self subclassResponsibility
 ]

@@ -1,6 +1,6 @@
 Class {
-	#name : #CTLinkedList,
-	#superclass : #CTContainer,
+	#name : #MyLinkedList,
+	#superclass : #MyContainer,
 	#instVars : [
 		'head',
 		'tail'
@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : #adding }
-CTLinkedList >> asArray [
+MyLinkedList >> asArray [
 
 	| contents current |
 	contents := OrderedCollection new.
@@ -23,7 +23,7 @@ CTLinkedList >> asArray [
 ]
 
 { #category : #adding }
-CTLinkedList >> at: aNumber [
+MyLinkedList >> at: aNumber [
 
 	| index current |
 	index := 1.
@@ -38,18 +38,18 @@ CTLinkedList >> at: aNumber [
 ]
 
 { #category : #initialization }
-CTLinkedList >> initialize [
+MyLinkedList >> initialize [
 	super initialize.
-	head := CTLink new.
+	head := MyLink new.
 	tail := head.
 ]
 
 { #category : #adding }
-CTLinkedList >> insert: anObject [
+MyLinkedList >> insert: anObject [
 
 	| link |
 	
-	link := CTLink new
+	link := MyLink new
 		value: anObject;
 		yourself.
 		
@@ -58,7 +58,7 @@ CTLinkedList >> insert: anObject [
 ]
 
 { #category : #adding }
-CTLinkedList >> remove: anObject [
+MyLinkedList >> remove: anObject [
 
 	| current |
 	current := head.
@@ -72,7 +72,7 @@ CTLinkedList >> remove: anObject [
 ]
 
 { #category : #accessing }
-CTLinkedList >> size [
+MyLinkedList >> size [
 	
 	| count current |
 	count := 0.

@@ -1,6 +1,6 @@
 Class {
-	#name : #CTArray,
-	#superclass : #CTContainer,
+	#name : #MyArray,
+	#superclass : #MyContainer,
 	#instVars : [
 		'contents'
 	],
@@ -8,36 +8,36 @@ Class {
 }
 
 { #category : #converting }
-CTArray >> asArray [ 
+MyArray >> asArray [ 
 
 	^ contents asArray
 ]
 
 { #category : #adding }
-CTArray >> at: aNumber [
+MyArray >> at: aNumber [
 
 	^ contents at: aNumber
 ]
 
 { #category : #initialization }
-CTArray >> initialize [
+MyArray >> initialize [
 	super initialize.
 	contents := OrderedCollection new.
 ]
 
 { #category : #adding }
-CTArray >> insert: anObject [
+MyArray >> insert: anObject [
 
 	contents add: anObject
 ]
 
 { #category : #adding }
-CTArray >> remove: anObject [
+MyArray >> remove: anObject [
 
 	contents remove: anObject
 ]
 
 { #category : #accessing }
-CTArray >> size [ 
+MyArray >> size [ 
 	^ contents size
 ]

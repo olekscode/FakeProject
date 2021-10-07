@@ -10,5 +10,5 @@ Class {
 MyArrayTest >> setUp [
 
 	super setUp.
-	container := MyArray new.
+	container := MyVector new.
 ]

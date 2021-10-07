@@ -1,5 +1,5 @@
 Class {
-	#name : #MyArray,
+	#name : #MyVector,
 	#superclass : #MyContainer,
 	#instVars : [
 		'contents'
@@ -8,36 +8,36 @@ Class {
 }
 
 { #category : #converting }
-MyArray >> asArray [ 
+MyVector >> asArray [ 
 
 	^ contents asArray
 ]
 
 { #category : #adding }
-MyArray >> at: aNumber [
+MyVector >> at: aNumber [
 
 	^ contents at: aNumber
 ]
 
 { #category : #initialization }
-MyArray >> initialize [
+MyVector >> initialize [
 	super initialize.
 	contents := OrderedCollection new.
 ]
 
 { #category : #adding }
-MyArray >> insertElement: anObject [
+MyVector >> insertElement: anObject [
 
 	contents add: anObject
 ]
 
 { #category : #testing }
-MyArray >> isEmpty [
+MyVector >> isEmpty [
 
 	^ self size = 0
 ]
 
 { #category : #accessing }
-MyArray >> size [ 
+MyVector >> size [ 
 	^ contents size
 ]
